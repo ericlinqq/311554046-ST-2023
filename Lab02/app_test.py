@@ -17,9 +17,9 @@ class ApplicationTest(unittest.TestCase):
         self.Application.get_random_person.side_effect = self.people
         print(f"{app.Application.select_next_person(self.Application)} selected")
         self.assertEqual(self.Application.selected[-1], self.people[-1])
-}
+
         self.Application.mailSystem = app.MailSystem()
-        self.Application.mailSystem.send =} Mock()
+        self.Application.mailSystem.send = Mock()
 
         context = [f"Congrats, {person}!" for person in self.people]
 
