@@ -22,8 +22,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
+        cd Lab03
         flake8 calculator_test.py
     - name: Test with unittest 
       run: |
-        cd Lab02
+        cd Lab03
         python3 -m unittest calculator_test.py -v
