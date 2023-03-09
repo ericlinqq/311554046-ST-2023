@@ -5,9 +5,9 @@ import math
 
 class ApplicationTest(unittest.TestCase):
 
-
     def test_add(self):
-        valid = [(0, 1), ('abdfdfs', 'dafdfsdv'), (-124, 0), (999999, 3432.3), (-3.235432, 3452.523)]
+        valid = [(0, 1), ('abdfdfs', 'dafdfsdv'), (-124, 0),
+                 (999999, 3432.3), (-3.235432, 3452.523)]
         invalid = [('adga', 341235)]
 
         for p1, p2 in valid:
@@ -19,7 +19,8 @@ class ApplicationTest(unittest.TestCase):
                 self.assertRaises(TypeError, Calculator.add(p1, p2))
 
     def test_divide(self):
-        valid = [(1, 1), (1.0354, 234233), (-12353, 7), (9999, 34.5984), (0, 3243214)]
+        valid = [(1, 1), (1.0354, 234233), (-12353, 7),
+                 (9999, 34.5984), (0, 3243214)]
         invalid = [(3423, 0)]
         for p1, p2 in valid:
             with self.subTest():
@@ -50,5 +51,7 @@ class ApplicationTest(unittest.TestCase):
         for p1 in invalid:
             with self.subTest():
                 self.assertRaises(OverflowError, Calculator.exp(p1))
+
+
 if __name__ == '__main__':
     unittest.main()
