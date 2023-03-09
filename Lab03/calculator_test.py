@@ -15,8 +15,8 @@ class ApplicationTest(unittest.TestCase):
                 self.assertEqual(p1+p2, Calculator.add(p1, p2))
 
         for p1, p2 in invalid:
-            with self.subTest():
-                self.assertRaises(TypeError, Calculator.add(p1, p2))
+            with self.assertRaises(TypeError):
+                Calculator.add(p1, p2)
 
     def test_divide(self):
         valid = [(1, 1), (1.0354, 234233), (-12353, 7),
@@ -27,8 +27,8 @@ class ApplicationTest(unittest.TestCase):
                 self.assertEqual(p1/p2, Calculator.divide(p1, p2))
 
         for p1, p2 in invalid:
-            with self.subTest():
-                self.assertRaises(ZeroDivisionError, Calculator.divide(p1, p2))
+            with self.assertRaises(ZeroDivisionError):
+                Calculator.divide(p1, p2)
 
     def test_sqrt(self):
         valid = [1, 0, 25, 0.9347853, 1233234]
@@ -38,8 +38,8 @@ class ApplicationTest(unittest.TestCase):
                 self.assertEqual(math.sqrt(p1), Calculator.sqrt(p1))
 
         for p1 in invalid:
-            with self.subTest():
-                self.assertRaises(ValueError, Calculator.sqrt(p1))
+            with self.assertRaises(ValueError):
+                Calculator.sqrt(p1)
 
     def test_exp(self):
         valid = [0, 1, -32, 57, 0.3432]
@@ -49,8 +49,8 @@ class ApplicationTest(unittest.TestCase):
                 self.assertEqual(math.exp(p1), Calculator.exp(p1))
 
         for p1 in invalid:
-            with self.subTest():
-                self.assertRaises(OverflowError, Calculator.exp(p1))
+            with self.assertRaises(OverflowError):
+                Calculator.exp(p1)
 
 
 if __name__ == '__main__':
