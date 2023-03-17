@@ -8,3 +8,5 @@
 ![Lab02_workflow](https://github.com/ericlinqq/311554046-ST-2023/actions/workflows/Lab02-CI.yml/badge.svg)  
   
 ![Lab03_workflow](https://github.com/ericlinqq/311554046-ST-2023/actions/workflows/Lab03-CI.yml/badge.svg)  
+  
+![Lab04_workflow](https://github.com/ericlinqq/311554046-ST-2023/actions/workflows/Lab04-CI.yml/badge.svg)  
