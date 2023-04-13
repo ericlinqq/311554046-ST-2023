@@ -1,4 +1,4 @@
-name: Lab01 CI
+name: Midterm CI
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
@@ -30,4 +30,5 @@ jobs:
     - name: Q2
       run: |
         cd Midterm
+        python3 app.py
         
