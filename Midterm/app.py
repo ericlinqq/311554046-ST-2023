@@ -19,6 +19,7 @@ driver.get("https://docs.python.org/3/tutorial/index.html")
 
 select =  WebDriverWait(driver, 10).until(lambda d: d.find_element(By.ID, 'language_select'))
 lang_sel = Select(select)
+lang_sel.select_by_value('zh-tw')
 title = WebDriverWait(driver, 10).until(lambda d: d.find_element(By.TAG_NAME, 'h1'))
 print(title.text)
 
