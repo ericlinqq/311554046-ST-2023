@@ -9,9 +9,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 
 options = Options()
-# options.add_argument('--headless')
-# options.add_argument('--window-size=1920,1080')
-# options.add_argument('--disable-gpu')
+options.add_argument('--headless')
+options.add_argument('--window-size=1920,1080')
+options.add_argument('--disable-gpu')
 options.add_experimental_option("detach", True)
 driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install(), options=options))
 
