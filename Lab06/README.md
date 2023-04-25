@@ -1,6 +1,15 @@
 # Lab 06 Program Security Detect  
 ### 311554046 林愉修  
 
+## Compiler Version  
+```
+$ gcc --version
+gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```  
+
 ## Part I.  
 > 下面是常見的記憶體操作問題，請分別寫出有下列記憶體操作問題的簡單程式，並說明 Valgrind 和 ASan 能否找的出來  
 Heap out-of-bounds read/write
